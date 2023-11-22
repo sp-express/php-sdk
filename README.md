@@ -5,11 +5,11 @@
 
 The **SP Express SDK** makes it easy for developers to access [sp.express](https://sp.express) API.
 
----
 
-![SP Express](./docs/sp-ex.png)
 
----
+![SP Express](./docs/sp-ex-b.png)
+
+
 
 Jump To:
 * [Getting Started](#Getting-Started)
