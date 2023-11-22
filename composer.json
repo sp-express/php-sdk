@@ -1,5 +1,5 @@
 {
-    "name": "sp-express/sdk",
+    "name": "sp-express/php-sdk",
     "type": "library",
     "require": {
         "php": ">=7.3"

@@ -10,8 +10,7 @@ The **SP Express SDK** makes it easy for developers to access [sp.express](https
 ![SP Express](./docs/sp-ex-bl.png)
 
 
-
-Jump To:
+## Jump To:
 * [Getting Started](#Getting-Started)
 * [Quick Examples](#Quick-Examples)
 * [Documentation](#Documentation)
