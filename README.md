@@ -3,7 +3,13 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 
-The **SP Express SDK** makes it easy for developers to access [sp.express API](https://sp.express) .
+The **SP Express SDK** makes it easy for developers to access [sp.express](https://sp.express) API.
+
+---
+
+![SP Express](./docs/sp-ex.png)
+
+---
 
 Jump To:
 * [Getting Started](#Getting-Started)
@@ -13,11 +19,8 @@ Jump To:
 
 ## Getting Started
 
-1. **Sign up** – Before you begin, you need to get login and API token from your salesman. C  
-2. **Minimum requirements** – To run the SDK, your system will need to meet the
-   [minimum requirements][docs-requirements], including having **PHP >= 7.3**.
-   We highly recommend having it compiled with the cURL extension and cURL
-   7.16.2+ compiled with a TLS backend (e.g., NSS or OpenSSL).
+1. **Sign up** – Before you begin, you need to obtain a login and API key from your salesman. Contact can be found in [your panel](https://sp.express/panel)
+2. **Minimum requirements** – To run the SDK, your system needs to have **PHP 7.3 or higher** with the cURL extension installed.
 3. **Install the SDK** – Using [Composer] is the recommended way to install the
    SP Express SDK for PHP: 
    ```
@@ -30,16 +33,16 @@ Jump To:
 
 ```php
 <?php
-// Require the Composer autoloader.
+// Require the Composer autoloader:
 require 'vendor/autoload.php';
 
 use SpExpress\Sdk\Client\ApiClient;
 
-// Instantiate an SP Express  
+// Instantiate an SP Express client: 
 $client = new ApiClient('login', 'api_key');
 ```
 
-### Create a pre-routing 
+### Create a courier pre-routing 
 
 ```php
 <?php
@@ -106,7 +109,9 @@ try {
 }
 ```
 
+## Documentation 
 
+Full documentation can be [found here](./docs/index.md)
 
 ## Getting Help
 
