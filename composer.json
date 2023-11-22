@@ -1,0 +1,19 @@
+{
+    "name": "sp-express/sdk",
+    "type": "library",
+    "require": {
+        "php": ">=7.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "SpExpress\\Sdk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vladislav Alexeyev",
+            "email": "vlad+github@alexeyev.me"
+        }
+    ]
+}
