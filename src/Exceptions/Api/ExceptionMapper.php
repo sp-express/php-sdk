@@ -28,6 +28,12 @@ class ExceptionMapper
             case ErrorCodes::ERROR_IDS_INVALID_FORMAT:
                 return new IncorrectIdsFormatException($error);
 
+            case ErrorCodes::ERROR_PACKAGE_NOT_FOUND_OR_YOU_ARE_NOT_THE_OWNER:
+                return new NotFoundOrYouAreNotTheOwnerException($error);
+
+            case ErrorCodes::ERROR_COULD_NOT_CANCEL:
+                return new CouldNotCancelException($error);
+
             case 400:
                 return new BadRequestException($error);
 
