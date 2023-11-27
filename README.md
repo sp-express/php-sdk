@@ -109,6 +109,15 @@ try {
 }
 ```
 
+### Cancel a courier pre-routing
+
+```php
+$client
+    ->courierPreRouting()
+    ->cancel(['483231127136528']);
+```
+
+
 ## Documentation 
 
 Full documentation can be [found here](./docs/index.md)

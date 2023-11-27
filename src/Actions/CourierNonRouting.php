@@ -49,4 +49,20 @@ class CourierNonRouting
                 'customs_duty' => $customsDuty,
             ]));
     }
+
+    /**
+     * @param array $ids
+     * @return bool
+     * @throws ApiException
+     */
+    public function cancel(
+        array $ids,
+    ): bool
+    {
+        $this->request->post('/V1/courier/cancel', [
+            'id' => $ids
+        ]);
+
+        return true;
+    }
 }
