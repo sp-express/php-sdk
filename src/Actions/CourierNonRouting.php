@@ -56,7 +56,7 @@ class CourierNonRouting
      * @throws ApiException
      */
     public function cancel(
-        array $ids,
+        array $ids
     ): bool
     {
         $this->request->post('/V1/courier/cancel', [
