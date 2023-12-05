@@ -20,7 +20,7 @@ The **SP Express SDK** makes it easy for developers to access [sp.express](https
 ## Getting Started
 
 1. **Sign up** – Before you begin, you need to obtain a login and API key from your salesman. Contact can be found in [your panel](https://sp.express/panel)
-2. **Minimum requirements** – To run the SDK, your system needs to have **PHP 7.3 or higher** with the cURL extension installed.
+2. **Minimum requirements** – To run the SDK, your system needs to have **PHP 7.1 or higher** with the cURL extension installed.
 3. **Install the SDK** – Using [Composer] is the recommended way to install the
    SP Express SDK for PHP: 
    ```
