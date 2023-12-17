@@ -1,9 +1,10 @@
 <?php
 
 
-
 namespace SpExpress\Sdk\Objects\Output;
 
+use SpExpress\Sdk\Enums\Result;
+use SpExpress\Sdk\Exceptions\Api\LabelException;
 use SpExpress\Sdk\Objects\AbstractResponse;
 
 class ContentObjCourierNonRouting extends AbstractResponse
@@ -21,6 +22,7 @@ class ContentObjCourierNonRouting extends AbstractResponse
 
     /**
      * @return PackageRespObj[]
+     * @throws LabelException
      */
     public function getPackages(): array
     {
@@ -28,7 +30,18 @@ class ContentObjCourierNonRouting extends AbstractResponse
 
         if (is_array($this->packages)) {
             foreach ($this->packages as $package) {
-                $result[] = new PackageRespObj($package);
+                $packageRespObj = new PackageRespObj($package);
+
+                if ($packageRespObj->getResult() !== Result::OK) {
+                    throw new LabelException(
+                        sprintf(
+                            'Label [%s] generation failed: %s',
+                            $packageRespObj->getPackageId(),
+                            $packageRespObj->getLog()
+                        ));
+                }
+
+                $result[] = $packageRespObj;
             }
         }
 
