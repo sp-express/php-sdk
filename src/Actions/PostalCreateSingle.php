@@ -1,6 +1,5 @@
 <?php
 
-
 namespace SpExpress\Sdk\Actions;
 
 use SpExpress\Sdk\Client\ApiRequest;
@@ -20,8 +19,7 @@ class PostalCreateSingle
 
     public function __construct(
         ApiRequest $request
-    )
-    {
+    ) {
         $this->request = $request;
     }
 
@@ -34,8 +32,7 @@ class PostalCreateSingle
         AddressObj              $receiver,
         Options2PostalSingleObj $options2,
         CustomsDutyObj          $customsDuty
-    ): PostalContentSingleObj
-    {
+    ): PostalContentSingleObj {
         return new PostalContentSingleObj($this
             ->request
             ->post('/V1/postal/create-single', [

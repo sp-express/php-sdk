@@ -2,7 +2,6 @@
 
 namespace SpExpress\Sdk\Exceptions\Api;
 
-
 use SpExpress\Sdk\Client\ApiError;
 use SpExpress\Sdk\Enums\ErrorCodes;
 use SpExpress\Sdk\Exceptions\ApiException;

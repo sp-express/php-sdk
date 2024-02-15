@@ -1,7 +1,5 @@
 <?php
 
-
-
 namespace SpExpress\Sdk\Enums;
 
 class PostalType

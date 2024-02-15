@@ -44,8 +44,7 @@ class ApiClient
         string  $login,
         string  $apiKey,
         ?string $host = null
-    )
-    {
+    ) {
         $this->request = new ApiRequest($login, $apiKey, $host);
     }
 

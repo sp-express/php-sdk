@@ -1,6 +1,5 @@
 <?php
 
-
 namespace SpExpress\Sdk\Actions;
 
 use SpExpress\Sdk\Client\ApiRequest;
@@ -16,8 +15,7 @@ class Track
 
     public function __construct(
         ApiRequest $request
-    )
-    {
+    ) {
         $this->request = $request;
     }
 
@@ -26,8 +24,7 @@ class Track
      */
     public function getCouriersTrackAndTrace(
         array $packageIds
-    ): TrackRespObj
-    {
+    ): TrackRespObj {
         return new TrackRespObj($this
             ->request
             ->post('/V1/track/courier', [
@@ -40,8 +37,7 @@ class Track
      */
     public function getPostalTrackAndTrace(
         array $packageIds
-    ): TrackRespObj
-    {
+    ): TrackRespObj {
         return new TrackRespObj($this
             ->request
             ->post('/V1/track/postal', [
@@ -54,8 +50,7 @@ class Track
      */
     public function getUniversalTrackAndTrace(
         string $packageId
-    ): TrackRespObj
-    {
+    ): TrackRespObj {
         return new TrackRespObj($this
             ->request
             ->post('/V1/track/universal', [
