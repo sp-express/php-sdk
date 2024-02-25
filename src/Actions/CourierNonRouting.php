@@ -1,6 +1,5 @@
 <?php
 
-
 namespace SpExpress\Sdk\Actions;
 
 use SpExpress\Sdk\Client\ApiRequest;
@@ -21,8 +20,7 @@ class CourierNonRouting
 
     public function __construct(
         ApiRequest $request
-    )
-    {
+    ) {
         $this->request = $request;
     }
 
@@ -36,8 +34,7 @@ class CourierNonRouting
         OptionsNonRoutingObj $options,
         Options2Obj          $options2,
         CustomsDutyObj       $customsDuty
-    ): ContentObjCourierNonRouting
-    {
+    ): ContentObjCourierNonRouting {
         return new ContentObjCourierNonRouting($this
             ->request
             ->post('/V1/courier/create-non-routing', [
@@ -57,8 +54,7 @@ class CourierNonRouting
      */
     public function cancel(
         array $ids
-    ): bool
-    {
+    ): bool {
         $this->request->post('/V1/courier/cancel', [
             'id' => $ids
         ]);

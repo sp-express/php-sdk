@@ -2,7 +2,7 @@
     "name": "sp-express/php-sdk",
     "type": "library",
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.4"
     },
     "license": "MIT",
     "autoload": {
@@ -15,5 +15,9 @@
             "name": "Vladislav Alexeyev",
             "email": "vlad+github@alexeyev.me"
         }
-    ]
+    ],
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.49",
+        "vimeo/psalm": "^5.22"
+    }
 }

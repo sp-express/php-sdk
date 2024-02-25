@@ -1,10 +1,7 @@
 <?php
 
-
-
 namespace SpExpress\Sdk\Objects;
 
-#[\AllowDynamicProperties]
 abstract class AbstractResponse
 {
     public function __construct(array $data = [])
