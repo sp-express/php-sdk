@@ -2,6 +2,8 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
+[![PHP-CS-Fixer](https://github.com/sp-express/php-sdk/actions/workflows/lint.yml/badge.svg)](https://github.com/sp-express/php-sdk/actions/workflows/lint.yml)
+[![Psalm Static analysis](https://github.com/sp-express/php-sdk/actions/workflows/psalm.yml/badge.svg)](https://github.com/sp-express/php-sdk/actions/workflows/psalm.yml)
 
 The **SP Express SDK** makes it easy for developers to access [sp.express](https://sp.express) API.
 
