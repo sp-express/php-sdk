@@ -6,13 +6,7 @@ use SpExpress\Sdk\TransportClient\TransportRequestException;
 
 class EnvHelper
 {
-    private static $versionFilePath;
-
-    public function __construct($versionFilePath = null)
-    {
-        // If no path is provided, use the default path
-        $this->versionFilePath = $versionFilePath ?? __DIR__ . '/../../.version';
-    }
+    private const PATH_VERSION_FILE = __DIR__ . '/../../.version';
 
     private static function isSemanticVersion($version): bool
     {
@@ -33,10 +27,9 @@ class EnvHelper
         return trim($contents);
     }
 
-    public static function getVersion($versionFilePath = null)
+    public static function getVersion()
     {
-        $versionFilePath = $versionFilePath ?? self::$versionFilePath;
-        $version = self::readFileContents($versionFilePath);
+        $version = self::readFileContents(self::PATH_VERSION_FILE);
 
         if ($version === null) {
             return null;
