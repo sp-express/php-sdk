@@ -65,7 +65,7 @@ class HttpClient implements TransportClient
             curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-type:application/json']);
 
             if (EnvHelper::getVersion() !== null) {
-                $apiVersionHeader = 'X-API-Version: ' . EnvHelper::getVersion();
+                $apiVersionHeader = 'X-PHP-SDK-Version: ' . EnvHelper::getVersion();
                 curl_setopt($curl, CURLOPT_HTTPHEADER, [$apiVersionHeader]);
             }
 

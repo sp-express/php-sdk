@@ -13,7 +13,7 @@ class EnvHelper
         return (bool)preg_match('/^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/', $version);
     }
 
-    private static function readFileContents($filePath)
+    private static function readFileContents($filePath): ?string
     {
         if (!file_exists($filePath)) {
             return null;
@@ -27,15 +27,11 @@ class EnvHelper
         return trim($contents);
     }
 
-    public static function getVersion()
+    public static function getVersion(): ?string
     {
         $version = self::readFileContents(self::PATH_VERSION_FILE);
 
-        if ($version === null) {
-            return null;
-        }
-
-        if (!self::isSemanticVersion($version)) {
+        if ($version === null || !self::isSemanticVersion($version)) {
             return null;
         }
 
