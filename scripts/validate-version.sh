@@ -16,6 +16,4 @@ fi
 # If the version matches, send the new tag to GitHub
 git tag -a "$version" -m "New version $version"
 git push origin "$version"
-
-# Push the commit to the main branch
-git push origin main
+exit 0
