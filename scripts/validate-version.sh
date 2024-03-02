@@ -1,19 +1,14 @@
 #!/bin/sh
 
-# Read the current tag from GitHub
-current_tag=$(git describe --tags --abbrev=0)
-
 # Read the version from the .version file
-version_file=".version"
-version=$(cat "$version_file")
+version=$(cat ../.version)
 
-# Check if the version in .version matches the current tag in GitHub
-if [ "$version" != "$current_tag" ]; then
-    echo "Error: The version in the .version file ($version) does not match the current tag in GitHub ($current_tag)"
+# Regular expression to match semantic versioning
+semver_pattern="^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$"
+
+# Check if the version matches the regex
+if [[ $version =~ $semver_pattern ]]; then
+    exit 0
+else
     exit 1
 fi
-
-# If the version matches, send the new tag to GitHub
-git tag -a "$version" -m "New version $version"
-git push origin "$version"
-exit 0
