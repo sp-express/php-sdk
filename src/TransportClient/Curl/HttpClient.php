@@ -7,6 +7,7 @@ namespace SpExpress\Sdk\TransportClient\Curl;
 use SpExpress\Sdk\TransportClient\TransportClient;
 use SpExpress\Sdk\TransportClient\TransportClientResponse;
 use SpExpress\Sdk\TransportClient\TransportRequestException;
+use SpExpress\Sdk\Utils\EnvHelper;
 
 class HttpClient implements TransportClient
 {
@@ -62,6 +63,12 @@ class HttpClient implements TransportClient
             curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
             curl_setopt($curl, CURLOPT_USERPWD, $this->login . ':' . $this->apiToken);
             curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-type:application/json']);
+
+            if (EnvHelper::getVersion() !== null) {
+                $apiVersionHeader = 'X-PHP-SDK-Version: ' . EnvHelper::getVersion();
+                curl_setopt($curl, CURLOPT_HTTPHEADER, [$apiVersionHeader]);
+            }
+
             curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($payload));
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
