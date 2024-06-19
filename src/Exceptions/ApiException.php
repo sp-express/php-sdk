@@ -2,14 +2,12 @@
 
 namespace SpExpress\Sdk\Exceptions;
 
+use Exception;
 use SpExpress\Sdk\Client\ApiError;
 
-class ApiException extends \Exception
+class ApiException extends Exception
 {
-    /**
-     * @var ApiError
-     */
-    protected $error;
+    protected ApiError $error;
 
     public function __construct(int $errorCode, string $description, ApiError $error)
     {

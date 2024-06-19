@@ -12,30 +12,15 @@ use SpExpress\Sdk\Actions\Track;
 
 class ApiClient
 {
-    /**
-     * @var ApiRequest
-     */
-    private $request;
+    private ApiRequest $request;
 
-    /**
-     * @var CourierPreRouting
-     */
-    private $courierPreRouting;
+    private ?CourierPreRouting $courierPreRouting = null;
 
-    /**
-     * @var CourierNonRouting
-     */
-    private $courierNonRouting;
+    private ?CourierNonRouting $courierNonRouting = null;
 
-    /**
-     * @var Track
-     */
-    private $track;
+    private ?Track $track = null;
 
-    /**
-     * @var PostalCreateSingle
-     */
-    private $postalCreateSingle;
+    private ?PostalCreateSingle $postalCreateSingle = null;
 
     /**
      * ApiClient constructor.

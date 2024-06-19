@@ -16,22 +16,13 @@ final class ApiRequest
     private const KEY_MESSAGE = 'message';
     private const KEY_STATUS = 'status';
 
-    private $httpClient;
+    private HttpClient $httpClient;
 
-    /**
-     * @var string
-     */
-    private $login;
+    private string $login;
 
-    /**
-     * @var string
-     */
-    private $apiKey;
+    private string $apiKey;
 
-    /**
-     * @var string
-     */
-    private $host;
+    private string $host;
 
     public function __construct(string $login, string $apiKey, ?string $host)
     {
@@ -44,7 +35,7 @@ final class ApiRequest
     /**
      * @param null $id
      */
-    public function get(string $action, ?array $params = [])
+    public function get(string $action, ?array $params = []): array
     {
         $url = $this->host . $action;
 
@@ -61,7 +52,7 @@ final class ApiRequest
      *
      * @return array|mixed
      */
-    public function post(string $action, ?array $payload = [])
+    public function post(string $action, ?array $payload = []): array
     {
         $url = $this->host . $action;
 

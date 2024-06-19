@@ -13,10 +13,7 @@ use SpExpress\Sdk\Objects\Output\ContentObjCourierPreRouting;
 
 class CourierPreRouting
 {
-    /**
-     * @var ApiRequest
-     */
-    private $request;
+    private ApiRequest $request;
 
     public function __construct(
         ApiRequest $request
