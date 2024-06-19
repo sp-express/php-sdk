@@ -19,15 +19,26 @@ namespace SpExpress\Sdk\Objects\Input;
 class CustomsDutyItemObj
 {
     public $quantity;
+
     public $unit_value;
+
     public $content_type;
+
     public $country_of_origin;
+
     public $hs_tariff_code;
+
     public $description;
+
     public $unit_value_gross;
+
     public $product_url;
+
     public $sku;
+
     public $unit_of_measurement;
+
     public $unit_weight_g_net;
+
     public $unit_weight_g_gross;
 }

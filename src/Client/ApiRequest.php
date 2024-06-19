@@ -12,8 +12,11 @@ final class ApiRequest
     private const HOST = 'https://api.sp.express';
 
     private const KEY_ERROR = 'error';
+
     private const KEY_RESPONSE = 'response';
+
     private const KEY_MESSAGE = 'message';
+
     private const KEY_STATUS = 'status';
 
     private readonly HttpClient $httpClient;

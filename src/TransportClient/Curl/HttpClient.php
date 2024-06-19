@@ -12,6 +12,7 @@ use SpExpress\Sdk\Utils\EnvHelper;
 class HttpClient implements TransportClient
 {
     protected $login;
+
     protected $apiToken;
 
     public function authorize(string $login = null, string $apiToken = null): TransportClient
@@ -41,10 +42,10 @@ class HttpClient implements TransportClient
             $curlError = curl_error($curl);
 
             if ($curlError || $curlErrorCode) {
-                $errorMessage = "Failed curl request. Curl error {$curlErrorCode}";
+                $errorMessage = 'Failed curl request. Curl error ' . $curlErrorCode;
 
-                if ($curlError) {
-                    $errorMessage .= ": {$curlError}";
+                if ($curlError !== '' && $curlError !== '0') {
+                    $errorMessage .= ': ' . $curlError;
                 }
 
                 $errorMessage .= '.';
@@ -79,10 +80,10 @@ class HttpClient implements TransportClient
             $curlError = curl_error($curl);
 
             if ($curlError || $curlErrorCode) {
-                $errorMessage = "Failed curl request. Curl error {$curlErrorCode}";
+                $errorMessage = 'Failed curl request. Curl error ' . $curlErrorCode;
 
-                if ($curlError) {
-                    $errorMessage .= ": {$curlError}";
+                if ($curlError !== '' && $curlError !== '0') {
+                    $errorMessage .= ': ' . $curlError;
                 }
 
                 $errorMessage .= '.';

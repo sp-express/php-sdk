@@ -11,6 +11,7 @@ use SpExpress\Sdk\Objects\AbstractResponse;
 class PostalContentSingleObj extends AbstractResponse
 {
     protected $number;
+
     protected $postals;
 
     /**

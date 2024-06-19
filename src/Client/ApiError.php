@@ -5,7 +5,9 @@ namespace SpExpress\Sdk\Client;
 class ApiError
 {
     protected $error_code;
+
     protected $desc;
+
     protected $details;
 
     public function __construct(

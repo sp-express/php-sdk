@@ -7,6 +7,7 @@ use SpExpress\Sdk\Objects\AbstractResponse;
 class ContentObjCourierPreRouting extends AbstractResponse
 {
     protected $number;
+
     protected $packages;
 
     /**

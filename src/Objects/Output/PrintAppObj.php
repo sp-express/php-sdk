@@ -7,13 +7,19 @@ use SpExpress\Sdk\Objects\AbstractResponse;
 class PrintAppObj extends AbstractResponse
 {
     protected $app_id;
+
     protected $status;
 
     protected $hash;
+
     protected $connection_status;
+
     protected $app_type;
+
     protected $description;
+
     protected $created_at;
+
     protected $updated_at;
 
     /**

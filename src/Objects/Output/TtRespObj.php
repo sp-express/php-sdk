@@ -7,12 +7,19 @@ use SpExpress\Sdk\Objects\AbstractResponse;
 class TtRespObj extends AbstractResponse
 {
     protected $id;
+
     protected $result;
+
     protected $error_code;
+
     protected $code;
+
     protected $current_stat_id;
+
     protected $stat_history;
+
     protected $country_from;
+
     protected $country_to;
 
     /**

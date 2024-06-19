@@ -7,14 +7,23 @@ use SpExpress\Sdk\Objects\AbstractResponse;
 class PackageRespObj extends AbstractResponse
 {
     protected $package_id;
+
     protected $result;
+
     protected $log;
+
     protected $labels_no;
+
     protected $labels;
+
     protected $labels_file_ext;
+
     protected $external_id;
+
     protected $return;
+
     protected $operator_name;
+
     protected $operator_url;
 
     /**

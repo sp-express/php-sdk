@@ -12,9 +12,14 @@ namespace SpExpress\Sdk\Objects\Input;
 class DeliveryAdviceObj
 {
     public $sender;
+
     public $receiver;
+
     public $eta;
+
     public $deliveryTerms;
+
     public $terms;
+
     public $fba;
 }

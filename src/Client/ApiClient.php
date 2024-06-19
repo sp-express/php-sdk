@@ -35,7 +35,7 @@ class ApiClient
 
     public function courierPreRouting(): CourierPreRouting
     {
-        if (!$this->courierPreRouting) {
+        if (!$this->courierPreRouting instanceof \SpExpress\Sdk\Actions\CourierPreRouting) {
             $this->courierPreRouting = new CourierPreRouting($this->request);
         }
 
@@ -44,7 +44,7 @@ class ApiClient
 
     public function courierNonRouting(): CourierNonRouting
     {
-        if (!$this->courierNonRouting) {
+        if (!$this->courierNonRouting instanceof \SpExpress\Sdk\Actions\CourierNonRouting) {
             $this->courierNonRouting = new CourierNonRouting($this->request);
         }
 
@@ -54,7 +54,7 @@ class ApiClient
 
     public function track(): Track
     {
-        if (!$this->track) {
+        if (!$this->track instanceof \SpExpress\Sdk\Actions\Track) {
             $this->track = new Track($this->request);
         }
 
@@ -63,7 +63,7 @@ class ApiClient
 
     public function postalCreateSingle(): PostalCreateSingle
     {
-        if (!$this->postalCreateSingle) {
+        if (!$this->postalCreateSingle instanceof \SpExpress\Sdk\Actions\PostalCreateSingle) {
             $this->postalCreateSingle = new PostalCreateSingle($this->request);
         }
 

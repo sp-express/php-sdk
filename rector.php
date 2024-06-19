@@ -7,14 +7,8 @@ use Rector\Set\ValueObject\LevelSetList;
 use Rector\Set\ValueObject\SetList;
 
 return static function (RectorConfig $rectorConfig): void {
-    $rectorConfig->import(SetList::PHP_82);
-    $rectorConfig->rules([
-        Rector\Php80\Rector\FunctionLike\MixedTypeRector::class,
-    ]);
-    $rectorConfig->sets([
-        LevelSetList::UP_TO_PHP_81,
-        SetList::TYPE_DECLARATION,
-    ]);
-
-
+    $rectorConfig->import(SetList::PHP_81);
+    $rectorConfig->import(SetList::DEAD_CODE);
+    $rectorConfig->import(SetList::CODE_QUALITY);
+    $rectorConfig->import(SetList::CODING_STYLE);
 };

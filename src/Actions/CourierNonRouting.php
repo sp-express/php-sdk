@@ -44,8 +44,6 @@ class CourierNonRouting
     }
 
     /**
-     * @param array $ids
-     * @return bool
      * @throws ApiException
      */
     public function cancel(

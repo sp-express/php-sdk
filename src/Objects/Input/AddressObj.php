@@ -16,12 +16,20 @@ namespace SpExpress\Sdk\Objects\Input;
 class AddressObj
 {
     public $name;
+
     public $company;
+
     public $address_line_1;
+
     public $address_line_2;
+
     public $city;
+
     public $zip_code;
+
     public $country;
+
     public $tel;
+
     public $email;
 }

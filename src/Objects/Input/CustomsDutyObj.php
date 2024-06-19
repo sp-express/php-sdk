@@ -17,13 +17,22 @@ namespace SpExpress\Sdk\Objects\Input;
 class CustomsDutyObj
 {
     public $reason_for_export;
+
     public $sender_tax_id;
+
     public $receiver_tax_id;
+
     public $shipment_date;
+
     public $terms_of_trade;
+
     public $unit_value_currency;
+
     public $items;
+
     public $sender_eori;
+
     public $invoice_id;
+
     public $ioss_number;
 }

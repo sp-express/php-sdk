@@ -7,6 +7,7 @@ use SpExpress\Sdk\Objects\AbstractResponse;
 class TrackRespObj extends AbstractResponse
 {
     protected $number;
+
     protected $tts;
 
     /**
