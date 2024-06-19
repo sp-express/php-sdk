@@ -1,7 +1,5 @@
 <?php
 
-
-
 namespace SpExpress\Sdk\Client;
 
 use SpExpress\Sdk\Actions\CourierNonRouting;

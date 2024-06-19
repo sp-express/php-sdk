@@ -1,7 +1,5 @@
 <?php
 
-
-
 namespace SpExpress\Sdk\Actions;
 
 use SpExpress\Sdk\Client\ApiRequest;

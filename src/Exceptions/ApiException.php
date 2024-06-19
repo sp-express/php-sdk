@@ -1,7 +1,5 @@
 <?php
 
-
-
 namespace SpExpress\Sdk\Exceptions;
 
 use SpExpress\Sdk\Client\ApiError;

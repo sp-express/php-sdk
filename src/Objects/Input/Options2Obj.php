@@ -1,7 +1,5 @@
 <?php
 
-
-
 namespace SpExpress\Sdk\Objects\Input;
 
 class Options2Obj

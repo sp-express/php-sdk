@@ -1,7 +1,5 @@
 <?php
 
-
-
 namespace SpExpress\Sdk\Objects;
 
 abstract class AbstractResponse

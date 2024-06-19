@@ -1,7 +1,5 @@
 <?php
 
-
-
 namespace SpExpress\Sdk\TransportClient;
 
 interface TransportClient
