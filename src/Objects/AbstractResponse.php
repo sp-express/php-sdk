@@ -9,7 +9,7 @@ abstract class AbstractResponse
         $this->setProperties($data);
     }
 
-    public function setProperties($data)
+    public function setProperties($data): void
     {
         foreach ($data as $key => $value) {
             $this->$key = $value;

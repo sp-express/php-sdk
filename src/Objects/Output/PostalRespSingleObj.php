@@ -16,10 +16,16 @@ use SpExpress\Sdk\Objects\AbstractResponse;
 class PostalRespSingleObj extends AbstractResponse
 {
     public $postal_id;
+
     public $result;
+
     public $log;
+
     public $labels_no;
+
     public $labels;
+
     public $external_id;
+
     public $labels_file_ext;
 }

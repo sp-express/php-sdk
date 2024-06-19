@@ -12,26 +12,19 @@ use SpExpress\Sdk\Objects\Output\PostalContentSingleObj;
 
 class PostalCreateSingle
 {
-    /**
-     * @var ApiRequest
-     */
-    private $request;
-
-    public function __construct(
-        ApiRequest $request
-    ) {
-        $this->request = $request;
+    public function __construct(private readonly ApiRequest $request)
+    {
     }
 
     /**
      * @throws ApiException
      */
     public function create(
-        PostalSingleObj         $postal,
-        AddressObj              $sender,
-        AddressObj              $receiver,
+        PostalSingleObj $postal,
+        AddressObj $sender,
+        AddressObj $receiver,
         Options2PostalSingleObj $options2,
-        CustomsDutyObj          $customsDuty
+        CustomsDutyObj $customsDuty
     ): PostalContentSingleObj {
         return new PostalContentSingleObj($this
             ->request
