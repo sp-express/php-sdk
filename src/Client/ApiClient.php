@@ -12,7 +12,7 @@ use SpExpress\Sdk\Actions\Track;
 
 class ApiClient
 {
-    private ApiRequest $request;
+    public ApiRequest $request;
 
     private ?CourierPreRouting $courierPreRouting = null;
 
