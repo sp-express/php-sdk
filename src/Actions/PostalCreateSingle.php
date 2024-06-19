@@ -12,7 +12,7 @@ use SpExpress\Sdk\Objects\Output\PostalContentSingleObj;
 
 class PostalCreateSingle
 {
-    public function __construct(private ApiRequest $request)
+    public function __construct(private readonly ApiRequest $request)
     {
     }
 

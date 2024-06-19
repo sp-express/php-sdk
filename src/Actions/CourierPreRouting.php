@@ -14,7 +14,7 @@ use SpExpress\Sdk\Objects\Output\ContentObjCourierPreRouting;
 
 class CourierPreRouting
 {
-    public function __construct(private ApiRequest $request)
+    public function __construct(private readonly ApiRequest $request)
     {
     }
 

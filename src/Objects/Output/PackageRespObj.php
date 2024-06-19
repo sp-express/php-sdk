@@ -15,6 +15,7 @@ class PackageRespObj extends AbstractResponse
     protected $external_id;
     protected $return;
     protected $operator_name;
+    protected $operator_url;
 
     /**
      * @return mixed
@@ -84,4 +85,11 @@ class PackageRespObj extends AbstractResponse
     {
         return $this->operator_name;
     }
+
+    public function getOperatorUrl()
+    {
+        return $this->operator_url;
+    }
+
+
 }
