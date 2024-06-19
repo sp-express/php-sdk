@@ -10,15 +10,12 @@ use SpExpress\Sdk\Objects\Input\Options2Obj;
 use SpExpress\Sdk\Objects\Input\OptionsNonRoutingObj;
 use SpExpress\Sdk\Objects\Input\PackageObj;
 use SpExpress\Sdk\Objects\Output\ContentObjCourierNonRouting;
+use SpExpress\Sdk\Objects\Input\DeliveryPointObj;
 
 class CourierNonRouting
 {
-    private ApiRequest $request;
-
-    public function __construct(
-        ApiRequest $request
-    ) {
-        $this->request = $request;
+    public function __construct(private ApiRequest $request)
+    {
     }
 
     /**
@@ -30,7 +27,8 @@ class CourierNonRouting
         AddressObj           $receiver,
         OptionsNonRoutingObj $options,
         Options2Obj          $options2,
-        CustomsDutyObj       $customsDuty
+        CustomsDutyObj       $customsDuty,
+        ?DeliveryPointObj     $deliveryPoint = null,
     ): ContentObjCourierNonRouting {
         return new ContentObjCourierNonRouting($this
             ->request
@@ -41,6 +39,7 @@ class CourierNonRouting
                 'options' => $options,
                 'options2' => $options2,
                 'customs_duty' => $customsDuty,
+                'delivery_point' => $deliveryPoint,
             ]));
     }
 

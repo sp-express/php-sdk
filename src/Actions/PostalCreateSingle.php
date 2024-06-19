@@ -12,12 +12,8 @@ use SpExpress\Sdk\Objects\Output\PostalContentSingleObj;
 
 class PostalCreateSingle
 {
-    private ApiRequest $request;
-
-    public function __construct(
-        ApiRequest $request
-    ) {
-        $this->request = $request;
+    public function __construct(private ApiRequest $request)
+    {
     }
 
     /**

@@ -6,6 +6,7 @@ use SpExpress\Sdk\Client\ApiRequest;
 use SpExpress\Sdk\Exceptions\ApiException;
 use SpExpress\Sdk\Objects\Input\AddressObj;
 use SpExpress\Sdk\Objects\Input\CustomsDutyObj;
+use SpExpress\Sdk\Objects\Input\DeliveryPointObj;
 use SpExpress\Sdk\Objects\Input\Options2Obj;
 use SpExpress\Sdk\Objects\Input\OptionsPreRoutingObj;
 use SpExpress\Sdk\Objects\Input\PackageObj;
@@ -13,12 +14,8 @@ use SpExpress\Sdk\Objects\Output\ContentObjCourierPreRouting;
 
 class CourierPreRouting
 {
-    private ApiRequest $request;
-
-    public function __construct(
-        ApiRequest $request
-    ) {
-        $this->request = $request;
+    public function __construct(private ApiRequest $request)
+    {
     }
 
     /**
@@ -30,7 +27,8 @@ class CourierPreRouting
         AddressObj           $receiver,
         OptionsPreRoutingObj $options,
         Options2Obj          $options2,
-        CustomsDutyObj       $customsDuty
+        CustomsDutyObj       $customsDuty,
+        ?DeliveryPointObj    $deliveryPoint = null,
     ): ContentObjCourierPreRouting {
         return new ContentObjCourierPreRouting($this
             ->request
@@ -41,6 +39,7 @@ class CourierPreRouting
                 'options' => $options,
                 'options2' => $options2,
                 'customs_duty' => $customsDuty,
+                'delivery_point' => $deliveryPoint,
             ]));
     }
 

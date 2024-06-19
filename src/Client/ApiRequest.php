@@ -18,17 +18,11 @@ final class ApiRequest
 
     private HttpClient $httpClient;
 
-    private string $login;
-
-    private string $apiKey;
-
     private string $host;
 
-    public function __construct(string $login, string $apiKey, ?string $host)
+    public function __construct(private string $login, private string $apiKey, ?string $host)
     {
         $this->httpClient = new HttpClient();
-        $this->login = $login;
-        $this->apiKey = $apiKey;
         $this->host = $host ?: self::HOST;
     }
 

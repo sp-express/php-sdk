@@ -6,14 +6,8 @@ namespace SpExpress\Sdk\TransportClient;
 
 class TransportClientResponse
 {
-    private ?int $httpStatus;
-
-    private ?string $body;
-
-    public function __construct(?int $httpStatus, ?string $body = null)
+    public function __construct(private ?int $httpStatus, private ?string $body = null)
     {
-        $this->httpStatus = $httpStatus;
-        $this->body = $body;
     }
 
     public function getHttpStatus(): ?int

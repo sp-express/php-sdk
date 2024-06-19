@@ -7,12 +7,9 @@ use SpExpress\Sdk\Client\ApiError;
 
 class ApiException extends Exception
 {
-    protected ApiError $error;
-
-    public function __construct(int $errorCode, string $description, ApiError $error)
+    public function __construct(int $errorCode, string $description, protected ApiError $error)
     {
-        $this->error = $error;
-        parent::__construct($error->getDescription() ?: $description, $errorCode);
+        parent::__construct($this->error->getDescription() ?: $description, $errorCode);
     }
 
     public function getError(): ApiError
