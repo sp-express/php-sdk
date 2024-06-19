@@ -6,7 +6,7 @@ namespace SpExpress\Sdk\TransportClient;
 
 class TransportClientResponse
 {
-    public function __construct(private ?int $httpStatus, private ?string $body = null)
+    public function __construct(private readonly ?int $httpStatus, private readonly ?string $body = null)
     {
     }
 

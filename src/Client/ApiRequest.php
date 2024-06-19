@@ -16,11 +16,11 @@ final class ApiRequest
     private const KEY_MESSAGE = 'message';
     private const KEY_STATUS = 'status';
 
-    private HttpClient $httpClient;
+    private readonly HttpClient $httpClient;
 
-    private string $host;
+    private readonly string $host;
 
-    public function __construct(private string $login, private string $apiKey, ?string $host)
+    public function __construct(private readonly string $login, private readonly string $apiKey, ?string $host)
     {
         $this->httpClient = new HttpClient();
         $this->host = $host ?: self::HOST;
