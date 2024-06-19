@@ -8,7 +8,6 @@ return (new PhpCsFixer\Config())
     ->setRules([
         '@Symfony' => true,
         'no_unused_imports' => true,
-        'declare_strict_types' => true,
         'array_indentation' => true,
         'array_syntax' => ['syntax' => 'short'],
         'binary_operator_spaces' => true,
