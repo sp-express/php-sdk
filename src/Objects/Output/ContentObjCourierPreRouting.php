@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SpExpress\Sdk\Objects\Output;
 
 use SpExpress\Sdk\Objects\AbstractResponse;
@@ -10,9 +12,6 @@ class ContentObjCourierPreRouting extends AbstractResponse
 
     protected $packages;
 
-    /**
-     * @return mixed
-     */
     public function getNumber()
     {
         return $this->number;

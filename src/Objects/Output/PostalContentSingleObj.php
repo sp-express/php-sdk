@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SpExpress\Sdk\Objects\Output;
 
 use SpExpress\Sdk\Objects\AbstractResponse;
@@ -14,9 +16,6 @@ class PostalContentSingleObj extends AbstractResponse
 
     protected $postals;
 
-    /**
-     * @return mixed
-     */
     public function getNumber()
     {
         return $this->number;

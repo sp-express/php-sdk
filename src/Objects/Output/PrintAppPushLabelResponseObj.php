@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SpExpress\Sdk\Objects\Output;
 
 use SpExpress\Sdk\Objects\AbstractResponse;

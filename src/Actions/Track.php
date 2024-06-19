@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SpExpress\Sdk\Actions;
 
 use SpExpress\Sdk\Client\ApiRequest;

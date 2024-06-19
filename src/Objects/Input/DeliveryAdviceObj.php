@@ -1,13 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SpExpress\Sdk\Objects\Input;
 
 /**
  * @property AddressObj $sender
  * @property AddressObj $receiver
- * @property string $eta
- * @property string $deliveryTerms
- * @property string $terms
+ * @property string     $eta
+ * @property string     $deliveryTerms
+ * @property string     $terms
  */
 class DeliveryAdviceObj
 {

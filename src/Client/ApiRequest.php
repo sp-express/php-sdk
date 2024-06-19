@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SpExpress\Sdk\Client;
 
 use SpExpress\Sdk\Exceptions\Api\ExceptionMapper;
@@ -29,9 +31,6 @@ final class ApiRequest
         $this->host = $host ?: self::HOST;
     }
 
-    /**
-     * @param null $id
-     */
     public function get(string $action, ?array $params = []): array
     {
         $url = $this->host . $action;

@@ -1,11 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SpExpress\Sdk\Exceptions;
 
-use Exception;
 use SpExpress\Sdk\Client\ApiError;
 
-class ApiException extends Exception
+class ApiException extends \Exception
 {
     public function __construct(int $errorCode, string $description, protected ApiError $error)
     {

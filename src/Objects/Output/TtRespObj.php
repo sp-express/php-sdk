@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SpExpress\Sdk\Objects\Output;
 
 use SpExpress\Sdk\Objects\AbstractResponse;
@@ -22,9 +24,6 @@ class TtRespObj extends AbstractResponse
 
     protected $country_to;
 
-    /**
-     * @return mixed
-     */
     public function getId()
     {
         return $this->id;
@@ -38,49 +37,31 @@ class TtRespObj extends AbstractResponse
         return $this->result;
     }
 
-    /**
-     * @return mixed
-     */
     public function getErrorCode()
     {
         return $this->error_code;
     }
 
-    /**
-     * @return mixed
-     */
     public function getCode()
     {
         return $this->code;
     }
 
-    /**
-     * @return mixed
-     */
     public function getCurrentStatId()
     {
         return $this->current_stat_id;
     }
 
-    /**
-     * @return mixed
-     */
     public function getStatHistory()
     {
         return $this->stat_history;
     }
 
-    /**
-     * @return mixed
-     */
     public function getCountryFrom()
     {
         return $this->country_from;
     }
 
-    /**
-     * @return mixed
-     */
     public function getCountryTo()
     {
         return $this->country_to;

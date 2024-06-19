@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SpExpress\Sdk\Actions;
 
 use SpExpress\Sdk\Client\ApiRequest;
@@ -22,13 +24,13 @@ class CourierPreRouting
      * @throws ApiException
      */
     public function create(
-        PackageObj           $packageObj,
-        AddressObj           $sender,
-        AddressObj           $receiver,
+        PackageObj $packageObj,
+        AddressObj $sender,
+        AddressObj $receiver,
         OptionsPreRoutingObj $options,
-        Options2Obj          $options2,
-        CustomsDutyObj       $customsDuty,
-        ?DeliveryPointObj    $deliveryPoint = null,
+        Options2Obj $options2,
+        CustomsDutyObj $customsDuty,
+        ?DeliveryPointObj $deliveryPoint = null,
     ): ContentObjCourierPreRouting {
         return new ContentObjCourierPreRouting($this
             ->request
@@ -50,7 +52,7 @@ class CourierPreRouting
         array $ids,
     ): bool {
         $this->request->post('/V1/courier/cancel', [
-            'id' => $ids
+            'id' => $ids,
         ]);
 
         return true;

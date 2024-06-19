@@ -1,18 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SpExpress\Sdk\Objects\Input;
 
 /**
- * @property string $reason_for_export
- * @property string $sender_tax_id
- * @property string $receiver_tax_id
- * @property string $shipment_date
- * @property string $terms_of_trade
- * @property string $unit_value_currency
+ * @property string               $reason_for_export
+ * @property string               $sender_tax_id
+ * @property string               $receiver_tax_id
+ * @property string               $shipment_date
+ * @property string               $terms_of_trade
+ * @property string               $unit_value_currency
  * @property CustomsDutyItemObj[] $items
- * @property string $sender_eori
- * @property string $invoice_id
- * @property string $ioss_number
+ * @property string               $sender_eori
+ * @property string               $invoice_id
+ * @property string               $ioss_number
  */
 class CustomsDutyObj
 {

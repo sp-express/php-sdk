@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace SpExpress\Sdk\Objects\Output;
 
 use SpExpress\Sdk\Objects\AbstractResponse;
@@ -26,33 +28,21 @@ class PackageRespObj extends AbstractResponse
 
     protected $operator_url;
 
-    /**
-     * @return mixed
-     */
     public function getPackageId()
     {
         return $this->package_id;
     }
 
-    /**
-     * @return mixed
-     */
     public function getResult()
     {
         return $this->result;
     }
 
-    /**
-     * @return mixed
-     */
     public function getLog()
     {
         return $this->log;
     }
 
-    /**
-     * @return mixed
-     */
     public function getLabelsNo()
     {
         return $this->labels_no;
@@ -63,33 +53,21 @@ class PackageRespObj extends AbstractResponse
         return $this->labels;
     }
 
-    /**
-     * @return mixed
-     */
     public function getLabelsFileExt()
     {
         return $this->labels_file_ext;
     }
 
-    /**
-     * @return mixed
-     */
     public function getExternalId()
     {
         return $this->external_id;
     }
 
-    /**
-     * @return mixed
-     */
     public function getReturn()
     {
         return $this->return;
     }
 
-    /**
-     * @return mixed
-     */
     public function getOperatorName()
     {
         return $this->operator_name;
@@ -99,6 +77,4 @@ class PackageRespObj extends AbstractResponse
     {
         return $this->operator_url;
     }
-
-
 }

@@ -15,7 +15,7 @@ class HttpClient implements TransportClient
 
     protected $apiToken;
 
-    public function authorize(string $login = null, string $apiToken = null): TransportClient
+    public function authorize(?string $login = null, ?string $apiToken = null): TransportClient
     {
         $this->login = $login;
         $this->apiToken = $apiToken;
@@ -33,7 +33,6 @@ class HttpClient implements TransportClient
             curl_setopt($curl, CURLOPT_USERPWD, $this->login . ':' . $this->apiToken);
             curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-type:application/json']);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-
 
             $response = curl_exec($curl);
 

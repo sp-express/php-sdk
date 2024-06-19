@@ -1,8 +1,8 @@
 <?php
 
-namespace SpExpress\Sdk\Utils;
+declare(strict_types=1);
 
-use SpExpress\Sdk\TransportClient\TransportRequestException;
+namespace SpExpress\Sdk\Utils;
 
 class EnvHelper
 {
@@ -10,7 +10,7 @@ class EnvHelper
 
     private static function isSemanticVersion($version): bool
     {
-        return (bool)preg_match('/^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/', (string) $version);
+        return (bool) preg_match('/^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/', (string) $version);
     }
 
     private static function readFileContents($filePath): ?string
