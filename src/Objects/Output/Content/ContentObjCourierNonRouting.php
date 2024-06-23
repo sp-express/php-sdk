@@ -1,8 +1,9 @@
 <?php
 
-namespace SpExpress\Sdk\Objects\Output;
+namespace SpExpress\Sdk\Objects\Output\Content;
 
 use SpExpress\Sdk\Objects\AbstractResponse;
+use SpExpress\Sdk\Objects\Output\PackageRespObj;
 
 class ContentObjCourierNonRouting extends AbstractResponse
 {

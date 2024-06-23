@@ -5,12 +5,12 @@ namespace SpExpress\Sdk\Actions;
 use SpExpress\Sdk\Client\ApiRequest;
 use SpExpress\Sdk\Exceptions\ApiException;
 use SpExpress\Sdk\Objects\Input\Address\AddressObj;
+use SpExpress\Sdk\Objects\Input\Address\DeliveryPointObj;
 use SpExpress\Sdk\Objects\Input\CustomsDuty\CustomsDutyObj;
-use SpExpress\Sdk\Objects\Input\DeliveryPointObj;
-use SpExpress\Sdk\Objects\Input\Options2Obj;
-use SpExpress\Sdk\Objects\Input\OptionsNonRoutingObj;
+use SpExpress\Sdk\Objects\Input\Options\Options2Obj;
+use SpExpress\Sdk\Objects\Input\Options\OptionsNonRoutingObj;
 use SpExpress\Sdk\Objects\Input\PackageObj;
-use SpExpress\Sdk\Objects\Output\ContentObjCourierNonRouting;
+use SpExpress\Sdk\Objects\Output\Content\ContentObjCourierNonRouting;
 
 class CourierNonRouting
 {

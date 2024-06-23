@@ -6,7 +6,7 @@ use SpExpress\Sdk\Client\ApiRequest;
 use SpExpress\Sdk\Exceptions\ApiException;
 use SpExpress\Sdk\Objects\Input\Address\AddressObj;
 use SpExpress\Sdk\Objects\Input\CustomsDuty\CustomsDutyObj;
-use SpExpress\Sdk\Objects\Input\Options2PostalSingleObj;
+use SpExpress\Sdk\Objects\Input\Options\Options2PostalSingleObj;
 use SpExpress\Sdk\Objects\Input\PostalSingleObj;
 use SpExpress\Sdk\Objects\Output\PostalContentSingleObj;
 

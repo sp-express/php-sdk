@@ -49,7 +49,12 @@ $client = new ApiClient('login', 'api_key');
 ```php
 <?php
 
-use SpExpress\Sdk\Exceptions\ApiException;use SpExpress\Sdk\Objects\Input\Address\AddressObj;use SpExpress\Sdk\Objects\Input\CustomsDuty\CustomsDutyObj;use SpExpress\Sdk\Objects\Input\Options2Obj;use SpExpress\Sdk\Objects\Input\OptionsPreRoutingObj;use SpExpress\Sdk\Objects\Input\PackageObj;
+use SpExpress\Sdk\Exceptions\ApiException;
+use SpExpress\Sdk\Objects\Input\Address\AddressObj;
+use SpExpress\Sdk\Objects\Input\CustomsDuty\CustomsDutyObj;
+use SpExpress\Sdk\Objects\Input\Options\Options2Obj;
+use SpExpress\Sdk\Objects\Input\Options\OptionsPreRoutingObj;
+use SpExpress\Sdk\Objects\Input\PackageObj;
 
 try {
     $package = new PackageObj();
