@@ -2,6 +2,8 @@
 
 namespace SpExpress\Sdk\Objects\Input;
 
+use SpExpress\Sdk\Objects\Input\Address\AddressObj;
+
 /**
  * @property AddressObj $sender
  * @property AddressObj $receiver

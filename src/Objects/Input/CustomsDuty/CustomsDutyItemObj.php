@@ -1,6 +1,6 @@
 <?php
 
-namespace SpExpress\Sdk\Objects\Input;
+namespace SpExpress\Sdk\Objects\Input\CustomsDuty;
 
 /**
  * @property int    $quantity

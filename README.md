@@ -44,17 +44,12 @@ use SpExpress\Sdk\Client\ApiClient;
 $client = new ApiClient('login', 'api_key');
 ```
 
-### Create a courier pre-routing 
+### Create a courier pre-routing
 
 ```php
 <?php
 
-use SpExpress\Sdk\Exceptions\ApiException;
-use SpExpress\Sdk\Objects\Input\AddressObj;
-use SpExpress\Sdk\Objects\Input\CustomsDutyObj;
-use SpExpress\Sdk\Objects\Input\Options2Obj;
-use SpExpress\Sdk\Objects\Input\OptionsPreRoutingObj;
-use SpExpress\Sdk\Objects\Input\PackageObj;
+use SpExpress\Sdk\Exceptions\ApiException;use SpExpress\Sdk\Objects\Input\Address\AddressObj;use SpExpress\Sdk\Objects\Input\CustomsDuty\CustomsDutyObj;use SpExpress\Sdk\Objects\Input\Options2Obj;use SpExpress\Sdk\Objects\Input\OptionsPreRoutingObj;use SpExpress\Sdk\Objects\Input\PackageObj;
 
 try {
     $package = new PackageObj();

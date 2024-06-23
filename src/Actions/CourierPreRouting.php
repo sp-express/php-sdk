@@ -4,8 +4,8 @@ namespace SpExpress\Sdk\Actions;
 
 use SpExpress\Sdk\Client\ApiRequest;
 use SpExpress\Sdk\Exceptions\ApiException;
-use SpExpress\Sdk\Objects\Input\AddressObj;
-use SpExpress\Sdk\Objects\Input\CustomsDutyObj;
+use SpExpress\Sdk\Objects\Input\Address\AddressObj;
+use SpExpress\Sdk\Objects\Input\CustomsDuty\CustomsDutyObj;
 use SpExpress\Sdk\Objects\Input\DeliveryPointObj;
 use SpExpress\Sdk\Objects\Input\Options2Obj;
 use SpExpress\Sdk\Objects\Input\OptionsPreRoutingObj;
