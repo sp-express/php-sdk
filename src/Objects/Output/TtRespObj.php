@@ -22,6 +22,10 @@ class TtRespObj extends AbstractResponse
 
     protected $country_to;
 
+    protected $stat_id_history;
+
+
+
     public function getId()
     {
         return $this->id;
@@ -64,4 +68,17 @@ class TtRespObj extends AbstractResponse
     {
         return $this->country_to;
     }
+
+    
+    public function getStatIdHistory()
+    {
+        return $this->stat_id_history;
+    }
+
+
+    public function setStatIdHistory($stat_id_history): void
+    {
+        $this->stat_id_history = $stat_id_history;
+    }
+
 }
