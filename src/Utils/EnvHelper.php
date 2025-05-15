@@ -2,15 +2,13 @@
 
 namespace SpExpress\Sdk\Utils;
 
-use SpExpress\Sdk\TransportClient\TransportRequestException;
-
 class EnvHelper
 {
     private const PATH_VERSION_FILE = __DIR__ . '/../../.version';
 
     private static function isSemanticVersion($version): bool
     {
-        return (bool)preg_match('/^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/', $version);
+        return (bool) preg_match('/^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/', (string) $version);
     }
 
     private static function readFileContents($filePath): ?string

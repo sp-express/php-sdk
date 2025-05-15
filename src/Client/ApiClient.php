@@ -4,45 +4,27 @@ namespace SpExpress\Sdk\Client;
 
 use SpExpress\Sdk\Actions\CourierNonRouting;
 use SpExpress\Sdk\Actions\CourierPreRouting;
-use SpExpress\Sdk\Actions\DeliveryAdvice;
-use SpExpress\Sdk\Actions\Email;
 use SpExpress\Sdk\Actions\PostalCreateSingle;
-use SpExpress\Sdk\Actions\Printer;
 use SpExpress\Sdk\Actions\Track;
 
 class ApiClient
 {
-    /**
-     * @var ApiRequest
-     */
-    private $request;
+    public ApiRequest $request;
 
-    /**
-     * @var CourierPreRouting
-     */
-    private $courierPreRouting;
+    private ?CourierPreRouting $courierPreRouting = null;
 
-    /**
-     * @var CourierNonRouting
-     */
-    private $courierNonRouting;
+    private ?CourierNonRouting $courierNonRouting = null;
 
-    /**
-     * @var Track
-     */
-    private $track;
+    private ?Track $track = null;
 
-    /**
-     * @var PostalCreateSingle
-     */
-    private $postalCreateSingle;
+    private ?PostalCreateSingle $postalCreateSingle = null;
 
     /**
      * ApiClient constructor.
      */
     public function __construct(
-        string  $login,
-        string  $apiKey,
+        string $login,
+        string $apiKey,
         ?string $host = null
     ) {
         $this->request = new ApiRequest($login, $apiKey, $host);
@@ -50,7 +32,7 @@ class ApiClient
 
     public function courierPreRouting(): CourierPreRouting
     {
-        if (!$this->courierPreRouting) {
+        if (!$this->courierPreRouting instanceof CourierPreRouting) {
             $this->courierPreRouting = new CourierPreRouting($this->request);
         }
 
@@ -59,17 +41,16 @@ class ApiClient
 
     public function courierNonRouting(): CourierNonRouting
     {
-        if (!$this->courierNonRouting) {
+        if (!$this->courierNonRouting instanceof CourierNonRouting) {
             $this->courierNonRouting = new CourierNonRouting($this->request);
         }
 
         return $this->courierNonRouting;
     }
 
-
     public function track(): Track
     {
-        if (!$this->track) {
+        if (!$this->track instanceof Track) {
             $this->track = new Track($this->request);
         }
 
@@ -78,7 +59,7 @@ class ApiClient
 
     public function postalCreateSingle(): PostalCreateSingle
     {
-        if (!$this->postalCreateSingle) {
+        if (!$this->postalCreateSingle instanceof PostalCreateSingle) {
             $this->postalCreateSingle = new PostalCreateSingle($this->request);
         }
 

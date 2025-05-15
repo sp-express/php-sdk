@@ -12,39 +12,24 @@ final class ApiRequest
     private const HOST = 'https://api.sp.express';
 
     private const KEY_ERROR = 'error';
+
     private const KEY_RESPONSE = 'response';
+
     private const KEY_MESSAGE = 'message';
+
     private const KEY_STATUS = 'status';
 
-    private $httpClient;
+    private readonly HttpClient $httpClient;
 
-    /**
-     * @var string
-     */
-    private $login;
+    private readonly string $host;
 
-    /**
-     * @var string
-     */
-    private $apiKey;
-
-    /**
-     * @var string
-     */
-    private $host;
-
-    public function __construct(string $login, string $apiKey, ?string $host)
+    public function __construct(private readonly string $login, private readonly string $apiKey, ?string $host)
     {
         $this->httpClient = new HttpClient();
-        $this->login = $login;
-        $this->apiKey = $apiKey;
         $this->host = $host ?: self::HOST;
     }
 
-    /**
-     * @param null $id
-     */
-    public function get(string $action, ?array $params = [])
+    public function get(string $action, ?array $params = []): array
     {
         $url = $this->host . $action;
 
@@ -61,7 +46,7 @@ final class ApiRequest
      *
      * @return array|mixed
      */
-    public function post(string $action, ?array $payload = [])
+    public function post(string $action, ?array $payload = []): array
     {
         $url = $this->host . $action;
 

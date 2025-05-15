@@ -11,11 +11,9 @@ use SpExpress\Sdk\Objects\AbstractResponse;
 class PostalContentSingleObj extends AbstractResponse
 {
     protected $number;
+
     protected $postals;
 
-    /**
-     * @return mixed
-     */
     public function getNumber()
     {
         return $this->number;
