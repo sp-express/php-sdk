@@ -8,15 +8,8 @@ use SpExpress\Sdk\Objects\Output\TrackRespObj;
 
 class Track
 {
-    /**
-     * @var ApiRequest
-     */
-    private $request;
-
-    public function __construct(
-        ApiRequest $request
-    ) {
-        $this->request = $request;
+    public function __construct(private readonly ApiRequest $request)
+    {
     }
 
     /**

@@ -18,14 +18,24 @@ namespace SpExpress\Sdk\Objects\Input;
 class PackageObj
 {
     public $weight;
+
     public $size_l;
+
     public $size_w;
+
     public $size_d;
+
     public $value;
+
     public $value_currency;
+
     public $content;
+
     public $ref;
+
     public $note1;
+
     public $note2;
+
     public $is_documents;
 }

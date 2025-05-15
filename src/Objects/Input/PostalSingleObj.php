@@ -18,14 +18,24 @@ namespace SpExpress\Sdk\Objects\Input;
 class PostalSingleObj
 {
     public $type;
+
     public $weight;
+
     public $size_class;
+
     public $sp_point;
+
     public $content;
+
     public $ref;
+
     public $value;
+
     public $value_currency;
+
     public $note1;
+
     public $note2;
+
     public $is_documents;
 }

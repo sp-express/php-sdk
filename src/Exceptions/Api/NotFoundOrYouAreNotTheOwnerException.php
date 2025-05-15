@@ -12,5 +12,4 @@ class NotFoundOrYouAreNotTheOwnerException extends ApiException
     {
         parent::__construct(ErrorCodes::ERROR_PACKAGE_NOT_FOUND_OR_YOU_ARE_NOT_THE_OWNER, 'Package not found or you are not the owner', $error);
     }
-
 }
