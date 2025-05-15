@@ -1,7 +1,7 @@
 # SP Express PHP SDK
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
-[![Software License][ico-license]](LICENSE.md)
+[![Software License][ico-license]](LICENCE.md)
 [![PHP-CS-Fixer](https://github.com/sp-express/php-sdk/actions/workflows/lint.yml/badge.svg)](https://github.com/sp-express/php-sdk/actions/workflows/lint.yml)
 [![Psalm Static analysis](https://github.com/sp-express/php-sdk/actions/workflows/psalm.yml/badge.svg)](https://github.com/sp-express/php-sdk/actions/workflows/psalm.yml)
 
@@ -11,20 +11,24 @@ The **SP Express SDK** makes it easy for developers to access [sp.express](https
 
 ![SP Express](./docs/sp-ex-bl.png)
 
+## Disclaimer
+
+Please note that not all API methods are currently implemented in this SDK. If you need functionality that is not available in the SDK:
+- You can make raw API requests directly to the SP Express API
+- Consider opening an issue on our [Github Issue Tracker][sdk-issues] to request the missing functionality
 
 ## Jump To:
 * [Getting Started](#Getting-Started)
 * [Quick Examples](#Quick-Examples)
-* [Documentation](#Documentation)
 * [Getting Help](#Getting-Help)
 * [Contributing](#Contributing)
 
 ## Getting Started
 
 1. **Sign up** – Before you begin, you need to obtain a login and API key from your salesman. Contact can be found in [your panel](https://sp.express/panel)
-2. **Minimum requirements** – To run the SDK, your system needs to have **PHP 7.1 or higher** with the cURL extension installed.
+2. **Minimum requirements** – To run the SDK, your system needs to have **PHP 8.1 or higher** with the cURL extension installed.
 3. **Install the SDK** – Using [Composer] is the recommended way to install the
-   SP Express SDK for PHP: 
+   SP Express SDK for PHP:
    ```
    composer require sp-express/php-sdk
    ```
@@ -44,7 +48,7 @@ use SpExpress\Sdk\Client\ApiClient;
 $client = new ApiClient('login', 'api_key');
 ```
 
-### Create a courier pre-routing 
+### Create a courier pre-routing
 
 ```php
 <?php
@@ -120,9 +124,7 @@ $client
 ```
 
 
-## Documentation 
 
-Full documentation can be [found here](./docs/index.md)
 
 ## Getting Help
 
