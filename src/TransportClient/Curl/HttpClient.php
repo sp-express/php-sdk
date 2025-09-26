@@ -31,6 +31,7 @@ class HttpClient implements TransportClient
             curl_setopt($curl, CURLOPT_USERPWD, $this->login . ':' . $this->apiToken);
             curl_setopt($curl, CURLOPT_HTTPHEADER, ['Content-type:application/json']);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
 
             $response = curl_exec($curl);
 
@@ -73,6 +74,7 @@ class HttpClient implements TransportClient
 
             curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($payload));
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
 
             $response = curl_exec($curl);
 
